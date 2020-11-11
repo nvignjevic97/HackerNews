@@ -1,0 +1,21 @@
+<h1 style="color: wheat; opacity: 0.7;" id="tableLabel" *ngIf="!progres">Show stories</h1>
+
+<p style="color: wheat; opacity: 0.7;" *ngIf="!progres">Welcome to show stories section.</p>
+
+<mat-spinner style="stroke: #ffffff !important; margin:0 auto;" *ngIf="progres"></mat-spinner>
+<p style="color: wheat; opacity: 0.7; text-align: center;" *ngIf="progres"> Please wait. Loading...</p>
+<div *ngIf="!progres">
+<mat-card style="background-color: wheat; margin-top: 3%; opacity: 0.7;" *ngFor="let story of showNews" >
+  <mat-card-title style="  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 0px;">{{story.title}}</mat-card-title>
+  <mat-card-subtitle> <a  style="text-decoration: none;
+    font-size: 18px;
+    color: #551180 !important;" href="{{story.url}}"> {{story.url | slice: 0:30 }}</a> </mat-card-subtitle>
+  <mat-card-subtitle>{{story.kids ? story.kids.length : '0'}} comments</mat-card-subtitle>
+  <mat-card-content style="display: flex;
+  justify-content: flex-end;">
+    <span style="font-weight: bold;">Submited by: </span> <span style="color: tomato;">&nbsp;{{story.by}}</span>
+  </mat-card-content>
+</mat-card>
+</div>

@@ -1,0 +1,63 @@
+<header style="background-color: #49496d !important;">
+  <nav style="background-color: #49496d !important;"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand"  style="color: orange;
+      font-size: 29px;" [routerLink]="['/fetch-data']" >HackerNewsTest</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 25px;
+            color: #c1b8a7 !important;
+            font-weight: bold; 
+    margin-right: 15px;" class="nav-link text-dark" [routerLink]="['/fetch-data']"
+              >All</a
+            >
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 25px;
+            color: #c1b8a7 !important;
+            font-weight: bold; 
+         margin-right: 15px;" class="nav-link text-dark" [routerLink]="['/ask-stories']"
+              >Ask Stories</a
+            >
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 25px;
+            color: #c1b8a7 !important;
+            font-weight: bold; 
+    margin-right: 15px;" class="nav-link text-dark" [routerLink]="['/job-stories']"
+              >Job Stories</a
+            >
+          </li>
+          
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 25px;
+            color: #c1b8a7 !important;
+            font-weight: bold;
+            margin-right: 15px;" class="nav-link text-dark" [routerLink]="['/show-stories']"
+              >Show Stories</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
